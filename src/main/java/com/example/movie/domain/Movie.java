@@ -1,7 +1,11 @@
 package com.example.movie.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Date;
 
+@Entity
+@Table(name="movie")
 public class Movie {
 
     private int id;

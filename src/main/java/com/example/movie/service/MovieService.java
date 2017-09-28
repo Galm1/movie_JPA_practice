@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface MovieService {
 
-    Movie add(Movie movie);
+    Object add(Movie movie);
     void add(List<Movie> movies);
-    Movie getById(int id);
+    Object getById(int id);
     List<Movie> get();
     void update(Movie movie);
     void delete(int id);
