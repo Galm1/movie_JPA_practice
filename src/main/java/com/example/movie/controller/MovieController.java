@@ -4,9 +4,11 @@ import com.example.movie.domain.Movie;
 import com.example.movie.service.MovieService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.List;
 
 @RestController
 public class MovieController {
@@ -33,5 +35,9 @@ public class MovieController {
         return "ok";
     }
 
+    @GetMapping("/api/movies")
+    public List<Movie> getAll(Model model) {
+        return movieService.get();
+    }
 
 }
