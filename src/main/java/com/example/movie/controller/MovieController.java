@@ -40,4 +40,9 @@ public class MovieController {
         return movieService.get();
     }
 
+    @GetMapping("/api/movie/{id}")
+    public Movie getMovie(@PathVariable("id") Integer id) {
+        return (Movie) movieService.getById(id);
+    }
+
 }
